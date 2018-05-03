@@ -5,6 +5,7 @@ config/staging.json
 config/test.json
 config/ENV.json
 config/custom-environment-variables.json
+config/apikeys.json
 
 # OS X
 .DS_Store
