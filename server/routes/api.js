@@ -1,11 +1,10 @@
 'use strict';
 const express = require('express');
-const Sentiment = require('sentiment');
+// const Sentiment = require('sentiment');
 const router = express.Router();
-const sentiment = new Sentiment();
+// const sentiment = new Sentiment();
 
-const result = sentiment.analyze('Cats are stupid.');
-console.dir(result);
+// const result = sentiment.analyze('Cats are stupid.');
 
 router.route('/')
   .get((req, res) => {
