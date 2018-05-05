@@ -10,23 +10,21 @@ class App extends React.Component {
 
     this.state = {
       query: '',
-      tweetId: ''
+      tweetIds: []
     };
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(e) {
     this.setState({query: e.target.value});
-    if (this.state.query !== '') {
-      this.getQuery();
-    }
+    this.getQuery(e.target.value);
   }
 
-  getQuery() {
-    let query = this.state.query;
+  getQuery(query) {
     axios.get(`http://localhost:3000/tweets/${query}`)
       .then((res) => {
-        console.log(res.data);
+        this.setState({tweetIds: res.data});
+        // console.log(res.data);
       })
       .catch((err) => {
         console.log(err);
@@ -42,7 +40,7 @@ class App extends React.Component {
           onChange={(e) => this.handleChange(e)} 
         />
         <SentimentStats />
-        <Stream tweetId={this.state.tweetId} />
+        <Stream tweetIds={this.state.tweetIds} />
       </div>
     );
   }

@@ -20,6 +20,6 @@ tw.on('tweet', (tweet) => {
   }).then((res) => {
       // console.log(res);
   }).catch((err) => {
-    console.log(err);
+    // console.error(err);
   });
 });
