@@ -6,7 +6,6 @@ const Stream = (props) => {
   const tweetList = tweetIds.map((tweet) => 
     <TweetList key={tweet.toString()} item={tweet}/>
   );
-  console.log(tweetList);
 
   return (
     <div>

@@ -1,9 +1,6 @@
 const express = require('express');
 const {client} = require('../middleware/elastic_search');
 const router = express.Router();
-// const Sentiment = require('sentiment');
-// const sentiment = new Sentiment();
-// const result = sentiment.analyze('Cats are stupid.');
 
 router.route('/')
   .get((req, res) => {
@@ -22,7 +19,6 @@ router.route('/:query')
       hits.forEach(hit => {
         results.push(hit._source.data.id_str);
       });
-      console.log(results);
       res.status(200).send(results);
     }).catch((error) => {
       // console.trace(error.message);

@@ -4,7 +4,7 @@ const Search = (props) => {
   return (
       <form>
       <input placeholder="Search for..." ref={(input) => input} onChange={props.onChange} />
-      <p>{props.query}</p>
+      <p>Showing results for the keyword <em>{props.query}</em></p>
     </form>
   );
 };

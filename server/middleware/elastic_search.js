@@ -16,4 +16,3 @@ const search = function(query) {
 };
 
 module.exports.client = client;
-module.exports.search = search;
