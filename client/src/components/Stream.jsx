@@ -1,15 +1,18 @@
 import React from 'react';
-import {Tweet} from 'react-twitter-widgets';
+import TweetList from './TweetList.jsx';
 
 const Stream = (props) => {
+  const tweetIds = props.tweetIds;
+  const tweetList = tweetIds.map((tweet) => 
+    <TweetList key={tweet.toString()} item={tweet}/>
+  );
+  console.log(tweetList);
+
   return (
-    <Tweet 
-      tweetId={'511181794914627584'}
-      options={{
-        width: 300, 
-        cards: 'hidden'
-      }}
-    />
+    <div>
+      <h4>Recent Related Tweets</h4>
+      <ul>{tweetList}</ul>
+    </div>
   );
 };
 
