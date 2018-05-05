@@ -2,6 +2,7 @@ import React from 'react';
 import Search from './Search.jsx';
 import SentimentStats from './SentimentStats.jsx';
 import Stream from './Stream.jsx';
+import axios from 'axios';
 
 class App extends React.Component {
   constructor(props) {
@@ -9,12 +10,27 @@ class App extends React.Component {
 
     this.state = {
       query: '',
+      tweetId: ''
     };
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(e) {
     this.setState({query: e.target.value});
+    if (this.state.query !== '') {
+      this.getQuery();
+    }
+  }
+
+  getQuery() {
+    let query = this.state.query;
+    axios.get(`http://localhost:3000/tweets/${query}`)
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   render() {
@@ -26,7 +42,7 @@ class App extends React.Component {
           onChange={(e) => this.handleChange(e)} 
         />
         <SentimentStats />
-        <Stream />
+        <Stream tweetId={this.state.tweetId} />
       </div>
     );
   }
