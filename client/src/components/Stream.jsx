@@ -7,12 +7,28 @@ const Stream = (props) => {
     <TweetList key={tweet.toString()} item={tweet}/>
   );
 
-  return (
-    <div>
-      <h4>Recent Related Tweets</h4>
-      <ul>{tweetList}</ul>
-    </div>
-  );
+  if (tweetIds.length === 0 && props.query === '') {
+    return (
+      <div>
+        <h4>Recent Related Tweets</h4>
+        <p>Enter your search term above</p>
+      </div>
+    );
+  } else if (tweetIds.length !== 0) {
+    return (
+      <div>
+        <h4>Recent Related Tweets</h4>
+        <ul>{tweetList}</ul>
+      </div>
+    );
+  } else if (tweetIds.length === 0 && props.query !== '') {
+    return (
+      <div>
+        <h4>Recent Related Tweets</h4>
+        <p>No results found</p>
+      </div>
+    );
+  }
 };
 
 export default Stream;

@@ -14,8 +14,15 @@ const tw = new Twitter({
 
 const sentiment = new Sentiment();
 
-tw.track('kittens');
-tw.track('mango');
+let searchQuery = 'pizza' || '';
+tw.track(searchQuery);
+
+const endKeywordSearch = function(searchQuery) {
+  setTimeout(() => {
+    tw.untrack(searchQuery);
+  }, 30000);
+};
+
 tw.on('tweet', (tweet) => {
   io.emit('tweet', tweet);
   const analysis = sentiment.analyze(tweet.text);
@@ -27,14 +34,13 @@ tw.on('tweet', (tweet) => {
   };
   // console.log(tweet.text, 'this is my tweet');
   // console.log(analysis);
-  axios.post('http://localhost:9200/tweets/queries', {
-    data: {
-      data: tweet,
-      sentiment: analysisResult
-    }
+  axios.post(`http://localhost:9200/tweets/${searchQuery}`, {
+    data: tweet
   }).then((res) => {
-    console.log(res);
+    // console.log(res);
   }).catch((err) => {
     // console.error(err);
   });
 });
+
+module.exports.tw = tw;
