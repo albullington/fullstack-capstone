@@ -40,8 +40,8 @@ class App extends React.Component {
           query={this.state.query}
           onChange={(e) => this.handleChange(e)} 
         />
-        <SentimentStats />
         <Stream tweetIds={this.state.tweetIds} query={this.state.query} />
+        <SentimentStats />
       </Background>
     );
   }

@@ -1,22 +1,12 @@
 import React from 'react';
-import Text from '../styles.js';
+import {SmallHeader, Text, RightBox} from '../styles.js';
 
 const SentimentStats = (props) => {
   return (
-    <table>
-      <thead>
-        <tr>
-          <th colSpan="2">Total tweets (past 24 hrs)</th>
-          <th colSpan="2">Overall sentiment</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>42</td>
-          <td>positive</td>
-        </tr>
-      </tbody>
-    </table>
+    <RightBox>
+    <SmallHeader>Stats</SmallHeader>
+      <Text>This is a placeholder: show statistics about tweets</Text>
+    </RightBox>
   );
 };
 

@@ -1,12 +1,12 @@
 import React from 'react';
-import {Text} from '../styles.js';
+import {Text, Form, FormInput} from '../styles.js';
 
 const Search = (props) => {
   return (
-      <form>
-      <input placeholder="Search for..." ref={(input) => input} onChange={props.onChange} />
+      <Form>
+      <FormInput placeholder="Search for..." ref={(input) => input} onChange={props.onChange} />
       <Text>Showing results for the keyword <em>{props.query}</em></Text>
-    </form>
+    </Form>
   );
 };
 
