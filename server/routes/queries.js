@@ -18,13 +18,23 @@ router.route('/:query')
     }).then(body => {
       const hits = body.hits.hits;
       let results = [];
+      let sorted = [];
       hits.forEach(hit => {
-        results.push(hit._source.data.id_str);
+        sorted.push([hit._source.data.created_at, hit._source.data.id_str]);
+        for (var i = 0; i < sorted.length; i++) {
+          sorted.sort(sortDate(sorted[i], sorted[i + 1]));
+          sorted.reverse();
+          results.push(sorted[i][1]);
+        }
       });
       res.status(200).send(results); 
     }).catch(err => {
       console.log(err);
     });
   });
+
+const sortDate = function(a, b) {
+  return b - a;
+};
 
 module.exports = router;
