@@ -11,17 +11,19 @@ router.route('/')
 router.route('/:query')
   .get((req, res) => {
     let query = req.params.query;
-    client.search({ 
-      q: query
-    }).then((body) => {
+    client.search({
+      index: 'twitter', 
+      type: 'searches', 
+      q:`data.text:${query}`
+    }).then(body => {
       const hits = body.hits.hits;
       let results = [];
       hits.forEach(hit => {
         results.push(hit._source.data.id_str);
       });
       res.status(200).send(results); 
-    }).catch((err) => {
-      //console.log(err);
+    }).catch(err => {
+      console.log(err);
     });
   });
 

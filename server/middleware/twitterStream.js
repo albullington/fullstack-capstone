@@ -14,6 +14,7 @@ const tw = new Twitter({
 let searchQuery = 't' || '';
 tw.track(searchQuery);
 tw.track('a');
+tw.track('i');
 
 tw.on('tweet', (tweet) => {
   storeTweet(tweet);
@@ -37,26 +38,11 @@ const storeTweet = function(tweet) {
   axios.post('http://localhost:9200/twitter/searches', {
     data: tweet
   }).then((res) => {
-    console.log('fulltweet', res);
+    // console.log('fulltweet', res);
     // console.log(res.data.text);
   }).catch((err) => {
     // console.error('posting error', err);
   });
 };
-
-// const mapTweets = function(tweet) {
-//   axios.put('http://localhost:9200/twitter', {
-//     mappings: {
-//       doc: {
-//         properties: {
-//           text: {
-//             type: text
-//           }
-
-//         }
-//       }
-//     }
-//   }
-// }
 
 module.exports.tw = tw;
