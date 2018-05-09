@@ -35,7 +35,7 @@ export const LeftBox = styled.div`
   padding-right: 200px;
 `;
 
-export const RightBox = LeftBox.extend`
+export const RightBox = styled.div`
   display: inline-table;
 `;
 

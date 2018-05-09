@@ -5,7 +5,7 @@ const SentimentStats = (props) => {
   return (
     <RightBox>
     <SmallHeader>Stats</SmallHeader>
-      <Text>This is a placeholder: show statistics about tweets</Text>
+    {/* <iframe src="http://localhost:5601/app/kibana#/visualize/edit/4ee94a80-5324-11e8-8594-75e1e17f2341?embed=true&_g=()" height="400" width="400"></iframe> */}
     </RightBox>
   );
 };

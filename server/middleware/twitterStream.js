@@ -11,18 +11,12 @@ const tw = new Twitter({
   token_secret: accessSecret
 });
 
-let searchQuery = 'a' || '';
+let searchQuery = 't' || '';
 tw.track(searchQuery);
+tw.track('a');
+
 tw.on('tweet', (tweet) => {
-  let analysis = analyzeTweet(tweet.text);
-  tweet['sentiment'] = analysis;
-  axios.post('http://localhost:9200/tweets/kittens', {
-    data: tweet
-  }).then((res) => {
-    console.log('fulltweet', res);
-  }).catch((err) => {
-    // console.error(err);
-  });
+  storeTweet(tweet);
 });
 
 const analyzeTweet = function(text) {
@@ -32,9 +26,37 @@ const analyzeTweet = function(text) {
     score: analysis.score, 
     comparative: analysis.comparative,
     positive: analysis.positive,
-    negative: analysis.negative
+    negative: analysis.negative,
   };
   return analysisResult;
 };
+
+const storeTweet = function(tweet) {
+  let analysis = analyzeTweet(tweet.text);
+  tweet.sentiment = analysis;
+  axios.post('http://localhost:9200/twitter/searches', {
+    data: tweet
+  }).then((res) => {
+    console.log('fulltweet', res);
+    // console.log(res.data.text);
+  }).catch((err) => {
+    // console.error('posting error', err);
+  });
+};
+
+// const mapTweets = function(tweet) {
+//   axios.put('http://localhost:9200/twitter', {
+//     mappings: {
+//       doc: {
+//         properties: {
+//           text: {
+//             type: text
+//           }
+
+//         }
+//       }
+//     }
+//   }
+// }
 
 module.exports.tw = tw;

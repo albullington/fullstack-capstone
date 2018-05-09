@@ -22,7 +22,7 @@ class App extends React.Component {
   }
 
   getQuery(query) {
-    axios.get(`http://localhost:3000/tweets/${query}`)
+    axios.get(`http://localhost:3000/twitter/${query}`)
       .then((res) => {
         this.setState({tweetIds: res.data});
         // console.log(res.data);
