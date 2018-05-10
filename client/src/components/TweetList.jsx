@@ -7,7 +7,7 @@ const TweetList = (props) => {
     <Tweet
       tweetId={props.item} 
       options={{
-        width: 500, 
+        width: '75%', 
         height: 100,
         cards: 'hidden'
       }}

@@ -1,8 +1,9 @@
 import React from 'react';
+import axios from 'axios';
 import Search from './Search.jsx';
 import SentimentStats from './SentimentStats.jsx';
 import Stream from './Stream.jsx';
-import axios from 'axios';
+import {Background, Header} from '../styles';
 
 class App extends React.Component {
   constructor(props) {
@@ -21,7 +22,7 @@ class App extends React.Component {
   }
 
   getQuery(query) {
-    axios.get(`http://localhost:3000/tweets/${query}`)
+    axios.get(`http://localhost:3000/twitter/${query}`)
       .then((res) => {
         this.setState({tweetIds: res.data});
         // console.log(res.data);
@@ -33,15 +34,15 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>Welcome to Twitter Analytics</h1>
+      <Background>
+        <Header>Welcome to Twitter Analytics</Header>
         <Search
           query={this.state.query}
           onChange={(e) => this.handleChange(e)} 
         />
+        <Stream tweetIds={this.state.tweetIds} query={this.state.query} />
         <SentimentStats />
-        <Stream tweetIds={this.state.tweetIds} />
-      </div>
+      </Background>
     );
   }
 }

@@ -1,9 +1,7 @@
 const express = require('express');
-const {client} = require('../middleware/elastic_search');
+const {client} = require('../middleware/queryDatabase');
+const {tw} = require('../middleware/twitterStream');
 const router = express.Router();
-// const Sentiment = require('sentiment');
-// const sentiment = new Sentiment();
-// const result = sentiment.analyze('Cats are stupid.');
 
 router.route('/')
   .get((req, res) => {
@@ -14,19 +12,30 @@ router.route('/:query')
   .get((req, res) => {
     let query = req.params.query;
     client.search({
-      q: query
-    }).then((body) => {
+      index: 'twitter', 
+      type: 'searches', 
+      q:`data.text:${query}`
+    }).then(body => {
       const hits = body.hits.hits;
-      // console.log(hits);
-      let results = [];
+      let tweetIds = [];
+      let sorted = [];
       hits.forEach(hit => {
-        results.push(hit._source.data.id_str);
+        sorted.push([hit._source.data.created_at, hit._source.data.id_str]);
+        for (var i = 0; i < sorted.length; i++) {
+          sorted.sort(sortDate(sorted[i], sorted[i + 1]));
+          sorted.reverse();
+          tweetIds.push(sorted[i][1]);
+        }
       });
-      console.log(results);
-      res.status(200).send(results);
-    }).catch((error) => {
-      // console.trace(error.message);
-    });  
+      let uniqueResults = [...new Set(tweetIds)];
+      res.status(200).send(uniqueResults); 
+    }).catch(err => {
+      console.log(err);
+    });
   });
+
+const sortDate = function(a, b) {
+  return b - a;
+};
 
 module.exports = router;

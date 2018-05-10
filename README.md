@@ -1,29 +1,14 @@
 # Project Name
 
-The project description
-
-## Team
-
-- teamMember
-- teamMember
-- teamMember
-- teamMember
-
-## Roadmap
-
-View the project roadmap [here](LINK_TO_DOC)
-
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
+Twitter analytics page to dynamically render tweets based on queries searched. Requires login. 
 
 # Table of Contents
 
 1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Development](#development)
-    1. [Installing Dependencies](#installing-dependencies)
-    1. [Tasks](#tasks)
+2. [Requirements](#requirements)
+3. [Development](#development)
+4. [Installing Dependencies](#installing-dependencies)
+5. [Tasks](#tasks)
 
 ## Usage
 
@@ -34,7 +19,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
 - Node 6.9.x
 - Redis 3.2.x
 - Postgresql 9.6.x
-- etc
+- see package.json file for others
 
 ## Development
 
