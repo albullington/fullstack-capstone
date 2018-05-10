@@ -7,9 +7,11 @@ const TweetList = (props) => {
     <Tweet
       tweetId={props.item} 
       options={{
-        width: '75%', 
-        height: 100,
-        cards: 'hidden'
+        width: '80%', 
+        cards: 'hidden', 
+        conversation: 'none', 
+        theme: 'light', 
+        align: 'left'
       }}
     />
   );

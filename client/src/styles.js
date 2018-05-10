@@ -1,6 +1,12 @@
 import styled from 'styled-components';
 
 export const Background = styled.div`
+  box-sizing: content-box;
+  margin-left: 20px;
+  width: 100%;
+  @media (max-width: 900px) {
+    width: 90%;
+  },
   background-color: #87CEEB;
 `;
 
@@ -32,11 +38,10 @@ export const FormInput = styled.input`
 
 export const LeftBox = styled.div`
   display: inline-table;
-  padding-right: 200px;
+  box-sizing: content-box;
 `;
 
-export const RightBox = styled.div`
-  display: inline-table;
+export const RightBox = LeftBox.extend`
 `;
 
 
