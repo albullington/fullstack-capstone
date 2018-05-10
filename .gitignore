@@ -6,6 +6,7 @@ config/test.json
 config/ENV.json
 config/custom-environment-variables.json
 config/apikeys.json
+newrelic.js
 
 # OS X
 .DS_Store

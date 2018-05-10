@@ -1,0 +1,694 @@
+"profile" : {
+  "shards" : [
+    {
+      "id" : "[ntzzoI9dTk2aqfzz9CL55Q][twitter][0]",
+      "searches" : [
+        {
+          "query" : [
+            {
+              "type" : "TermQuery",
+              "description" : "data.text:peach",
+              "time" : "12.4ms",
+              "time_in_nanos" : 12452819,
+              "breakdown" : {
+                "score" : 2756,
+                "build_scorer_count" : 30,
+                "match_count" : 0,
+                "create_weight" : 12033266,
+                "next_doc" : 344727,
+                "match" : 0,
+                "create_weight_count" : 1,
+                "next_doc_count" : 13,
+                "score_count" : 8,
+                "build_scorer" : 72018,
+                "advance" : 0,
+                "advance_count" : 0
+              }
+            }
+          ],
+          "rewrite_time" : 2284,
+          "collector" : [
+            {
+              "name" : "CancellableCollector",
+              "reason" : "search_cancelled",
+              "time" : "18.8micros",
+              "time_in_nanos" : 18852,
+              "children" : [
+                {
+                  "name" : "SimpleTopScoreDocCollector",
+                  "reason" : "search_top_hits",
+                  "time" : "10.6micros",
+                  "time_in_nanos" : 10671
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "aggregations" : [ ]
+    },
+    {
+      "id" : "[ntzzoI9dTk2aqfzz9CL55Q][twitter][1]",
+      "searches" : [
+        {
+          "query" : [
+            {
+              "type" : "TermQuery",
+              "description" : "data.text:peach",
+              "time" : "14ms",
+              "time_in_nanos" : 14058746,
+              "breakdown" : {
+                "score" : 9168,
+                "build_scorer_count" : 31,
+                "match_count" : 0,
+                "create_weight" : 11712580,
+                "next_doc" : 2208775,
+                "match" : 0,
+                "create_weight_count" : 1,
+                "next_doc_count" : 24,
+                "score_count" : 16,
+                "build_scorer" : 128151,
+                "advance" : 0,
+                "advance_count" : 0
+              }
+            }
+          ],
+          "rewrite_time" : 1496,
+          "collector" : [
+            {
+              "name" : "CancellableCollector",
+              "reason" : "search_cancelled",
+              "time" : "45.7micros",
+              "time_in_nanos" : 45710,
+              "children" : [
+                {
+                  "name" : "SimpleTopScoreDocCollector",
+                  "reason" : "search_top_hits",
+                  "time" : "29.1micros",
+                  "time_in_nanos" : 29151
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "aggregations" : [ ]
+    },
+    {
+      "id" : "[ntzzoI9dTk2aqfzz9CL55Q][twitter][2]",
+      "searches" : [
+        {
+          "query" : [
+            {
+              "type" : "TermQuery",
+              "description" : "data.text:peach",
+              "time" : "15.1ms",
+              "time_in_nanos" : 15139474,
+              "breakdown" : {
+                "score" : 703310,
+                "build_scorer_count" : 27,
+                "match_count" : 0,
+                "create_weight" : 13047391,
+                "next_doc" : 1311745,
+                "match" : 0,
+                "create_weight_count" : 1,
+                "next_doc_count" : 21,
+                "score_count" : 15,
+                "build_scorer" : 76964,
+                "advance" : 0,
+                "advance_count" : 0
+              }
+            }
+          ],
+          "rewrite_time" : 1600,
+          "collector" : [
+            {
+              "name" : "CancellableCollector",
+              "reason" : "search_cancelled",
+              "time" : "724.7micros",
+              "time_in_nanos" : 724707,
+              "children" : [
+                {
+                  "name" : "SimpleTopScoreDocCollector",
+                  "reason" : "search_top_hits",
+                  "time" : "713micros",
+                  "time_in_nanos" : 713011
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "aggregations" : [ ]
+    },
+    {
+      "id" : "[ntzzoI9dTk2aqfzz9CL55Q][twitter][3]",
+      "searches" : [
+        {
+          "query" : [
+            {
+              "type" : "TermQuery",
+              "description" : "data.text:peach",
+              "time" : "10.4ms",
+              "time_in_nanos" : 10463506,
+              "breakdown" : {
+                "score" : 5870,
+                "build_scorer_count" : 27,
+                "match_count" : 0,
+                "create_weight" : 9675718,
+                "next_doc" : 705513,
+                "match" : 0,
+                "create_weight_count" : 1,
+                "next_doc_count" : 24,
+                "score_count" : 17,
+                "build_scorer" : 76336,
+                "advance" : 0,
+                "advance_count" : 0
+              }
+            }
+          ],
+          "rewrite_time" : 1480,
+          "collector" : [
+            {
+              "name" : "CancellableCollector",
+              "reason" : "search_cancelled",
+              "time" : "30.6micros",
+              "time_in_nanos" : 30670,
+              "children" : [
+                {
+                  "name" : "SimpleTopScoreDocCollector",
+                  "reason" : "search_top_hits",
+                  "time" : "17micros",
+                  "time_in_nanos" : 17003
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "aggregations" : [ ]
+    },
+    {
+      "id" : "[ntzzoI9dTk2aqfzz9CL55Q][twitter][4]",
+      "searches" : [
+        {
+          "query" : [
+            {
+              "type" : "TermQuery",
+              "description" : "data.text:peach",
+              "time" : "9.3ms",
+              "time_in_nanos" : 9315958,
+              "breakdown" : {
+                "score" : 8201,
+                "build_scorer_count" : 22,
+                "match_count" : 0,
+                "create_weight" : 9236231,
+                "next_doc" : 6094,
+                "match" : 0,
+                "create_weight_count" : 1,
+                "next_doc_count" : 9,
+                "score_count" : 5,
+                "build_scorer" : 65395,
+                "advance" : 0,
+                "advance_count" : 0
+              }
+            }
+          ],
+          "rewrite_time" : 1592,
+          "collector" : [
+            {
+              "name" : "CancellableCollector",
+              "reason" : "search_cancelled",
+              "time" : "33.3micros",
+              "time_in_nanos" : 33394,
+              "children" : [
+                {
+                  "name" : "SimpleTopScoreDocCollector",
+                  "reason" : "search_top_hits",
+                  "time" : "26.2micros",
+                  "time_in_nanos" : 26233
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "aggregations" : [ ]
+    }
+  ]
+}
+}
+
+//janet jackson query below
+
+
+"profile" : {
+  "shards" : [
+    {
+      "id" : "[ntzzoI9dTk2aqfzz9CL55Q][twitter][0]",
+      "searches" : [
+        {
+          "query" : [
+            {
+              "type" : "BooleanQuery",
+              "description" : "data.text:janet data.text:jackson",
+              "time" : "44.6ms",
+              "time_in_nanos" : 44626753,
+              "breakdown" : {
+                "score" : 729921,
+                "build_scorer_count" : 39,
+                "match_count" : 0,
+                "create_weight" : 24668186,
+                "next_doc" : 5035912,
+                "match" : 0,
+                "create_weight_count" : 1,
+                "next_doc_count" : 113,
+                "score_count" : 99,
+                "build_scorer" : 14192482,
+                "advance" : 0,
+                "advance_count" : 0
+              },
+              "children" : [
+                {
+                  "type" : "TermQuery",
+                  "description" : "data.text:janet",
+                  "time" : "20.5ms",
+                  "time_in_nanos" : 20554973,
+                  "breakdown" : {
+                    "score" : 4230,
+                    "build_scorer_count" : 35,
+                    "match_count" : 0,
+                    "create_weight" : 19317866,
+                    "next_doc" : 1121848,
+                    "match" : 0,
+                    "create_weight_count" : 1,
+                    "next_doc_count" : 19,
+                    "score_count" : 14,
+                    "build_scorer" : 110960,
+                    "advance" : 0,
+                    "advance_count" : 0
+                  }
+                },
+                {
+                  "type" : "TermQuery",
+                  "description" : "data.text:jackson",
+                  "time" : "5ms",
+                  "time_in_nanos" : 5018429,
+                  "breakdown" : {
+                    "score" : 644112,
+                    "build_scorer_count" : 53,
+                    "match_count" : 0,
+                    "create_weight" : 393280,
+                    "next_doc" : 3817979,
+                    "match" : 0,
+                    "create_weight_count" : 1,
+                    "next_doc_count" : 103,
+                    "score_count" : 89,
+                    "build_scorer" : 162812,
+                    "advance" : 0,
+                    "advance_count" : 0
+                  }
+                }
+              ]
+            }
+          ],
+          "rewrite_time" : 781654,
+          "collector" : [
+            {
+              "name" : "CancellableCollector",
+              "reason" : "search_cancelled",
+              "time" : "831micros",
+              "time_in_nanos" : 831065,
+              "children" : [
+                {
+                  "name" : "SimpleTopScoreDocCollector",
+                  "reason" : "search_top_hits",
+                  "time" : "782micros",
+                  "time_in_nanos" : 782009
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "aggregations" : [ ]
+    },
+    {
+      "id" : "[ntzzoI9dTk2aqfzz9CL55Q][twitter][1]",
+      "searches" : [
+        {
+          "query" : [
+            {
+              "type" : "BooleanQuery",
+              "description" : "data.text:janet data.text:jackson",
+              "time" : "41.8ms",
+              "time_in_nanos" : 41808164,
+              "breakdown" : {
+                "score" : 1457401,
+                "build_scorer_count" : 38,
+                "match_count" : 0,
+                "create_weight" : 22522399,
+                "next_doc" : 4880268,
+                "match" : 0,
+                "create_weight_count" : 1,
+                "next_doc_count" : 105,
+                "score_count" : 94,
+                "build_scorer" : 12947858,
+                "advance" : 0,
+                "advance_count" : 0
+              },
+              "children" : [
+                {
+                  "type" : "TermQuery",
+                  "description" : "data.text:janet",
+                  "time" : "19.4ms",
+                  "time_in_nanos" : 19475589,
+                  "breakdown" : {
+                    "score" : 3788,
+                    "build_scorer_count" : 39,
+                    "match_count" : 0,
+                    "create_weight" : 18090694,
+                    "next_doc" : 1281340,
+                    "match" : 0,
+                    "create_weight_count" : 1,
+                    "next_doc_count" : 17,
+                    "score_count" : 11,
+                    "build_scorer" : 99699,
+                    "advance" : 0,
+                    "advance_count" : 0
+                  }
+                },
+                {
+                  "type" : "TermQuery",
+                  "description" : "data.text:jackson",
+                  "time" : "5.5ms",
+                  "time_in_nanos" : 5564618,
+                  "breakdown" : {
+                    "score" : 1341163,
+                    "build_scorer_count" : 49,
+                    "match_count" : 0,
+                    "create_weight" : 368463,
+                    "next_doc" : 3481399,
+                    "match" : 0,
+                    "create_weight_count" : 1,
+                    "next_doc_count" : 94,
+                    "score_count" : 83,
+                    "build_scorer" : 373366,
+                    "advance" : 0,
+                    "advance_count" : 0
+                  }
+                }
+              ]
+            }
+          ],
+          "rewrite_time" : 40362,
+          "collector" : [
+            {
+              "name" : "CancellableCollector",
+              "reason" : "search_cancelled",
+              "time" : "3ms",
+              "time_in_nanos" : 3060226,
+              "children" : [
+                {
+                  "name" : "SimpleTopScoreDocCollector",
+                  "reason" : "search_top_hits",
+                  "time" : "2.9ms",
+                  "time_in_nanos" : 2941948
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "aggregations" : [ ]
+    },
+    {
+      "id" : "[ntzzoI9dTk2aqfzz9CL55Q][twitter][2]",
+      "searches" : [
+        {
+          "query" : [
+            {
+              "type" : "BooleanQuery",
+              "description" : "data.text:janet data.text:jackson",
+              "time" : "41.5ms",
+              "time_in_nanos" : 41532079,
+              "breakdown" : {
+                "score" : 1025167,
+                "build_scorer_count" : 37,
+                "match_count" : 0,
+                "create_weight" : 36293686,
+                "next_doc" : 3526904,
+                "match" : 0,
+                "create_weight_count" : 1,
+                "next_doc_count" : 92,
+                "score_count" : 84,
+                "build_scorer" : 686108,
+                "advance" : 0,
+                "advance_count" : 0
+              },
+              "children" : [
+                {
+                  "type" : "TermQuery",
+                  "description" : "data.text:janet",
+                  "time" : "33.1ms",
+                  "time_in_nanos" : 33138472,
+                  "breakdown" : {
+                    "score" : 390817,
+                    "build_scorer_count" : 41,
+                    "match_count" : 0,
+                    "create_weight" : 32141094,
+                    "next_doc" : 528948,
+                    "match" : 0,
+                    "create_weight_count" : 1,
+                    "next_doc_count" : 19,
+                    "score_count" : 13,
+                    "build_scorer" : 77539,
+                    "advance" : 0,
+                    "advance_count" : 0
+                  }
+                },
+                {
+                  "type" : "TermQuery",
+                  "description" : "data.text:jackson",
+                  "time" : "3.8ms",
+                  "time_in_nanos" : 3864959,
+                  "breakdown" : {
+                    "score" : 551923,
+                    "build_scorer_count" : 43,
+                    "match_count" : 0,
+                    "create_weight" : 361104,
+                    "next_doc" : 2903088,
+                    "match" : 0,
+                    "create_weight_count" : 1,
+                    "next_doc_count" : 83,
+                    "score_count" : 76,
+                    "build_scorer" : 48641,
+                    "advance" : 0,
+                    "advance_count" : 0
+                  }
+                }
+              ]
+            }
+          ],
+          "rewrite_time" : 1810224,
+          "collector" : [
+            {
+              "name" : "CancellableCollector",
+              "reason" : "search_cancelled",
+              "time" : "1ms",
+              "time_in_nanos" : 1082052,
+              "children" : [
+                {
+                  "name" : "SimpleTopScoreDocCollector",
+                  "reason" : "search_top_hits",
+                  "time" : "1ms",
+                  "time_in_nanos" : 1052839
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "aggregations" : [ ]
+    },
+    {
+      "id" : "[ntzzoI9dTk2aqfzz9CL55Q][twitter][3]",
+      "searches" : [
+        {
+          "query" : [
+            {
+              "type" : "BooleanQuery",
+              "description" : "data.text:janet data.text:jackson",
+              "time" : "38.7ms",
+              "time_in_nanos" : 38743528,
+              "breakdown" : {
+                "score" : 115651,
+                "build_scorer_count" : 38,
+                "match_count" : 0,
+                "create_weight" : 19463559,
+                "next_doc" : 1646124,
+                "match" : 0,
+                "create_weight_count" : 1,
+                "next_doc_count" : 96,
+                "score_count" : 81,
+                "build_scorer" : 17517978,
+                "advance" : 0,
+                "advance_count" : 0
+              },
+              "children" : [
+                {
+                  "type" : "TermQuery",
+                  "description" : "data.text:janet",
+                  "time" : "17.8ms",
+                  "time_in_nanos" : 17818513,
+                  "breakdown" : {
+                    "score" : 4693,
+                    "build_scorer_count" : 39,
+                    "match_count" : 0,
+                    "create_weight" : 17201208,
+                    "next_doc" : 357281,
+                    "match" : 0,
+                    "create_weight_count" : 1,
+                    "next_doc_count" : 21,
+                    "score_count" : 13,
+                    "build_scorer" : 255257,
+                    "advance" : 0,
+                    "advance_count" : 0
+                  }
+                },
+                {
+                  "type" : "TermQuery",
+                  "description" : "data.text:jackson",
+                  "time" : "1.6ms",
+                  "time_in_nanos" : 1682538,
+                  "breakdown" : {
+                    "score" : 23405,
+                    "build_scorer_count" : 53,
+                    "match_count" : 0,
+                    "create_weight" : 317969,
+                    "next_doc" : 1198095,
+                    "match" : 0,
+                    "create_weight_count" : 1,
+                    "next_doc_count" : 87,
+                    "score_count" : 72,
+                    "build_scorer" : 142856,
+                    "advance" : 0,
+                    "advance_count" : 0
+                  }
+                }
+              ]
+            }
+          ],
+          "rewrite_time" : 3204253,
+          "collector" : [
+            {
+              "name" : "CancellableCollector",
+              "reason" : "search_cancelled",
+              "time" : "183.8micros",
+              "time_in_nanos" : 183820,
+              "children" : [
+                {
+                  "name" : "SimpleTopScoreDocCollector",
+                  "reason" : "search_top_hits",
+                  "time" : "148.7micros",
+                  "time_in_nanos" : 148733
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "aggregations" : [ ]
+    },
+    {
+      "id" : "[ntzzoI9dTk2aqfzz9CL55Q][twitter][4]",
+      "searches" : [
+        {
+          "query" : [
+            {
+              "type" : "BooleanQuery",
+              "description" : "data.text:janet data.text:jackson",
+              "time" : "42.6ms",
+              "time_in_nanos" : 42663582,
+              "breakdown" : {
+                "score" : 1712959,
+                "build_scorer_count" : 45,
+                "match_count" : 0,
+                "create_weight" : 22109178,
+                "next_doc" : 2146038,
+                "match" : 0,
+                "create_weight_count" : 1,
+                "next_doc_count" : 114,
+                "score_count" : 99,
+                "build_scorer" : 16695148,
+                "advance" : 0,
+                "advance_count" : 0
+              },
+              "children" : [
+                {
+                  "type" : "TermQuery",
+                  "description" : "data.text:janet",
+                  "time" : "18.3ms",
+                  "time_in_nanos" : 18376465,
+                  "breakdown" : {
+                    "score" : 2840,
+                    "build_scorer_count" : 40,
+                    "match_count" : 0,
+                    "create_weight" : 18285135,
+                    "next_doc" : 12654,
+                    "match" : 0,
+                    "create_weight_count" : 1,
+                    "next_doc_count" : 12,
+                    "score_count" : 7,
+                    "build_scorer" : 75776,
+                    "advance" : 0,
+                    "advance_count" : 0
+                  }
+                },
+                {
+                  "type" : "TermQuery",
+                  "description" : "data.text:jackson",
+                  "time" : "4.2ms",
+                  "time_in_nanos" : 4238134,
+                  "breakdown" : {
+                    "score" : 1622880,
+                    "build_scorer_count" : 60,
+                    "match_count" : 0,
+                    "create_weight" : 396558,
+                    "next_doc" : 2050688,
+                    "match" : 0,
+                    "create_weight_count" : 1,
+                    "next_doc_count" : 109,
+                    "score_count" : 94,
+                    "build_scorer" : 167744,
+                    "advance" : 0,
+                    "advance_count" : 0
+                  }
+                }
+              ]
+            }
+          ],
+          "rewrite_time" : 1680766,
+          "collector" : [
+            {
+              "name" : "CancellableCollector",
+              "reason" : "search_cancelled",
+              "time" : "1.8ms",
+              "time_in_nanos" : 1805805,
+              "children" : [
+                {
+                  "name" : "SimpleTopScoreDocCollector",
+                  "reason" : "search_top_hits",
+                  "time" : "1.7ms",
+                  "time_in_nanos" : 1754018
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "aggregations" : [ ]
+    }
+  ]
+}
+}
