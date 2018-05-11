@@ -26,6 +26,10 @@ export const Text = Header.extend`
   font-weight: 200;
 `;
 
+export const LeftText = Text.extend`
+  text-align: left;
+`;
+
 export const Form = styled.form`
   text-align: center;
   padding-top: 20px;
@@ -36,12 +40,18 @@ export const FormInput = styled.input`
   background-position: 10px 10px;
 `;
 
-export const LeftBox = styled.div`
-  display: inline-table;
+export const Container = styled.div`
   box-sizing: content-box;
 `;
 
-export const RightBox = LeftBox.extend`
+export const LeftBox = styled.span`
+  float: left;
+  width: 50%;
+`;
+
+export const RightBox = styled.span`
+  float: right;
+  width: 50%;
 `;
 
 

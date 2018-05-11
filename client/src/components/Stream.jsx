@@ -1,6 +1,6 @@
 import React from 'react';
 import TweetList from './TweetList.jsx';
-import {SmallHeader, Text, LeftBox} from '../styles.js';
+import {SmallHeader, LeftText, LeftBox} from '../styles.js';
 
 const Stream = (props) => {
   const tweetIds = props.tweetIds;
@@ -12,7 +12,7 @@ const Stream = (props) => {
     return (
       <LeftBox>
       <SmallHeader>Recent Related Tweets</SmallHeader>
-        <Text>Enter your search term above</Text>
+        <LeftText>Enter your search term above</LeftText>
       </LeftBox>
     );
   } else if (tweetIds.length !== 0) {
@@ -26,7 +26,7 @@ const Stream = (props) => {
     return (
       <LeftBox>
       <SmallHeader>Recent Related Tweets</SmallHeader>
-        <Text>No results found</Text>
+        <LeftText>No results found</LeftText>
       </LeftBox>
     );
   }
