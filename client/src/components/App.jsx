@@ -5,13 +5,13 @@ import SentimentStats from './SentimentStats.jsx';
 import Stream from './Stream.jsx';
 import { Background, Header, Container } from '../styles';
 
-/*
+// /*
 
-eslint init
+// eslint init
 
-look into:
-file loaders for webpack
-*/
+// look into:
+// file loaders for webpack
+// */
 
 export default class App extends Component {
   constructor(props) {
@@ -19,16 +19,11 @@ export default class App extends Component {
 
     this.state = {
       query: '',
-      tweetIds: [], 
-      sentiment: []
+      tweetIds: [],
+      sentiment: [],
     };
 
     this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleChange(e) {
-    this.setState({query: e.target.value});
-    this.getQuery(e.target.value);
   }
 
   getQuery(query) {
@@ -36,17 +31,21 @@ export default class App extends Component {
       .then((res) => {
         this.setState({
           tweetIds: res.data.tweetIds,
-          sentiment: res.data.sentiment
+          sentiment: res.data.sentiment,
         });
-      })
-      .catch((err) => {
-        console.log(err);
       });
+  }
+
+  handleChange(e) {
+    this.setState({
+      query: e.target.value,
+    });
+    this.getQuery(e.target.value);
   }
 
   render() {
     // destructure this.state
-    let {
+    const {
       tweetIds,
       query,
       sentiment,
@@ -60,8 +59,8 @@ export default class App extends Component {
           onChange={(e) => this.handleChange(e)} 
         />
         <Container>
-        <Stream tweetIds={tweetIds} query={query} />
-        <SentimentStats sentiment={sentiment} tweetIds={tweetIds} />
+          <Stream tweetIds={tweetIds} query={query} />
+          <SentimentStats sentiment={sentiment} tweetIds={tweetIds} />
         </Container>
       </Background>
     );

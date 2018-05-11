@@ -1,5 +1,5 @@
 {
-  "name": "course.thesis",
+  "name": "twitter-analytics",
   "version": "1.0.0",
   "scripts": {
     "start": "nodemon server/index.js",
@@ -27,7 +27,6 @@
     "eslint": "^4.9.0",
     "express": "^4.15.2",
     "express-session": "^1.15.1",
-    "express-sessions": "^1.0.6",
     "fbjs": "^0.8.16",
     "fs": "^0.0.1-security",
     "global": "^4.3.2",
@@ -43,6 +42,7 @@
     "passport-twitter": "^1.0.4",
     "peers": "^0.1.0",
     "pg": "^6.1.5",
+    "prop-types": "^15.6.1",
     "query-string": "^6.1.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",

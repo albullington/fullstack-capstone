@@ -1,15 +1,25 @@
 import React from 'react';
-import {Pies, Chart, Transform} from 'rumble-charts';
-import {SmallHeader, LeftText, RightBox} from '../styles.js';
+import PropTypes from 'prop-types';
+import { Pies, Chart, Transform } from 'rumble-charts';
+import { SmallHeader, LeftText, RightBox } from '../styles';
 
-const SentimentStats = (props) => {
-  const sentiment = props.sentiment;
+const propTypes = {
+  sentiment: PropTypes.arrayOf(PropTypes.object),
+  tweetIds: PropTypes.arrayOf(PropTypes.string),
+};
+
+const defaultProps = {
+  sentiment: [],
+  tweetIds: null,
+};
+
+const SentimentStats = ({ sentiment, tweetIds }) => {
   let positiveScore = 0;
   let negativeScore = 0;
   let neutral = 0;
   // use HoF
-  for (let i = 0; i < sentiment.length; i++) {
-    let score = sentiment[i].score;
+  sentiment.forEach((tweet) => {
+    const score = tweet.score;
     if (score > 0) {
       positiveScore += score;
     } else if (score < 0) {
@@ -17,34 +27,38 @@ const SentimentStats = (props) => {
     } else {
       neutral += 1;
     }
-  }
+  });
+  // for (let i = 0; i < sentiment.length; i++) {
+  //   const score = sentiment[i].score;
 
-  let series = [{
-    data: [ positiveScore, neutral, negativeScore ]
+  const series = [{
+    data: [positiveScore, neutral, negativeScore],
   }];
   // destructure
-  if (props.tweetIds.length === 0) {
+  if (tweetIds.length === 0) {
     return (
       <RightBox>
-      <SmallHeader>Stats</SmallHeader>
-      <LeftText>Analyze positive/negative sentiment</LeftText>
+        <SmallHeader>Stats</SmallHeader>
+        <LeftText>Analyze positive/negative sentiment</LeftText>
       </RightBox>
     );
-  } else {
-    return (
-      <RightBox>
+  }
+  return (
+    <RightBox>
       <SmallHeader>Stats</SmallHeader>
       <LeftText>Positive (blue): { positiveScore }</LeftText>
       <LeftText>Neutral (gray): { neutral }</LeftText>
       <LeftText>Negative (orange): { negativeScore }</LeftText>
-      <Chart width={600} height={250} series={ series }>
+      <Chart width={600} height={250} series={series}>
         <Transform method={['transpose', 'stack']}>
-          <Pies combined={true} />
+          <Pies combined />
         </Transform>
       </Chart>
-      </RightBox>
-    );
-  }
+    </RightBox>
+  );
 };
+
+SentimentStats.propTypes = propTypes;
+SentimentStats.defaultProps = defaultProps;
 
 export default SentimentStats;
