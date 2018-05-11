@@ -3,6 +3,7 @@ import TweetList from './TweetList.jsx';
 import {SmallHeader, LeftText, LeftBox} from '../styles.js';
 
 const Stream = (props) => {
+  // destructure
   const tweetIds = props.tweetIds;
   const tweetList = tweetIds.map((tweet) => 
     <TweetList key={tweet.toString()} item={tweet}/>

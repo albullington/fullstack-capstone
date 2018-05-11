@@ -17,6 +17,7 @@ tw.track('a');
 tw.track('i');
 
 tw.on('tweet', (tweet) => {
+  // move on one line
   storeTweet(tweet);
 });
 
@@ -35,6 +36,7 @@ const analyzeTweet = function(text) {
 const storeTweet = function(tweet) {
   let analysis = analyzeTweet(tweet.text);
   tweet.sentiment = analysis;
+  // remove the axios library and use native JS fetch method
   axios.post('http://localhost:9200/twitter/searches', {
     data: tweet
   }).then((res) => {

@@ -1,8 +1,8 @@
 import React from 'react';
-import {Tweet} from 'react-twitter-widgets';
+import { Tweet } from 'react-twitter-widgets';
 
 const TweetList = (props) => {
-
+  // destructure
   return (
     <Tweet
       tweetId={props.item} 
