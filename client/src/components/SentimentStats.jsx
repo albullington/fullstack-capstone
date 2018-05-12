@@ -17,7 +17,7 @@ const SentimentStats = ({ sentiment, tweetIds }) => {
   let positiveScore = 0;
   let negativeScore = 0;
   let neutral = 0;
-  // use HoF
+
   sentiment.forEach((tweet) => {
     const score = tweet.score;
     if (score > 0) {
@@ -28,13 +28,11 @@ const SentimentStats = ({ sentiment, tweetIds }) => {
       neutral += 1;
     }
   });
-  // for (let i = 0; i < sentiment.length; i++) {
-  //   const score = sentiment[i].score;
 
   const series = [{
     data: [positiveScore, neutral, negativeScore],
   }];
-  // destructure
+
   if (tweetIds.length === 0) {
     return (
       <RightBox>

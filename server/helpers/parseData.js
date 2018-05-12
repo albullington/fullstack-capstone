@@ -1,49 +1,61 @@
+const axios = require('axios');
+const Sentiment = require('sentiment');
+
 const parseData = (body) => {
   // destructure the body
-  let { hits: { hits } } = body;
-  // const hits = body.hits.hits;
-
-  let tweets = {
+  const { hits: { hits } } = body;
+  const tweets = {
     tweetIds: [],
-    sentiment: []
+    sentiment: [],
   };
 
-  let sorted = hits.map(hit => {
-    let {
+  const data = hits.map((hit) => {
+    const {
       created_at,
       id_str,
-      sentiment
+      sentiment,
     } = hit._source.data;
 
     return [id_str, sentiment, created_at];
-    // for (var i = 0; i < sorted.length; i++) {
-    //   console.log(sorted[i]);
-    //   sorted.sort(sortDate(sorted[i[0]], sorted[i + 1[0]]));
-    //   sorted.reverse();
-    //   console.log(sorted, 'sorted');
-    //   // tweets.push([sorted[i][1], sorted[i][2]]);
-    // }
   });
 
-  // use HoF
-  // for (var i = 0; i < sorted.length; i++) {
-  //   // array destructure
-  //   tweets.tweetIds.push(sorted[i][1]);
-  //   tweets.sentiment.push(sorted[i][2]);
-  // }
-
-  sorted.forEach((tweetArray) => {
-    let [
-      id, 
+  data.forEach((tweetArray) => {
+    const [
+      id,
       sentiment,
     ] = tweetArray;
 
     tweets.tweetIds.push(id);
     tweets.sentiment.push(sentiment);
   });
-      // let uniqueResults = [...new Set(tweets)];
-      // console.log('uniques', uniqueResults);
   return tweets;
 };
 
-module.exports = parseData;
+const analyzeTweet = (text) => {
+  const sentiment = new Sentiment();
+  const analysis = sentiment.analyze(text);
+  const analysisResult = {
+    score: analysis.score,
+    comparative: analysis.comparative,
+    positive: analysis.positive,
+    negative: analysis.negative,
+  };
+  return analysisResult;
+};
+
+const storeTweet = (tweet) => {
+  const newTweet = tweet;
+  const analysis = analyzeTweet(newTweet.text);
+  newTweet.sentiment = analysis;
+  // remove the axios library and use native JS fetch method
+  axios.post('http://localhost:9200/twitter/searches', {
+    data: newTweet,
+  }).then((res) => {
+    res.send(201);
+  }).catch((err) => {
+    throw (err);
+  });
+};
+
+module.exports.parseData = parseData;
+module.exports.storeTweet = storeTweet;

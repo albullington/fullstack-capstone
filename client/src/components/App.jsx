@@ -33,6 +33,8 @@ export default class App extends Component {
           tweetIds: res.data.tweetIds,
           sentiment: res.data.sentiment,
         });
+      }).catch((err) => {
+        // throw (err);
       });
   }
 
@@ -44,7 +46,6 @@ export default class App extends Component {
   }
 
   render() {
-    // destructure this.state
     const {
       tweetIds,
       query,
@@ -56,7 +57,7 @@ export default class App extends Component {
         <Header>Welcome to Twitter Analytics</Header>
         <Search
           query={query}
-          onChange={(e) => this.handleChange(e)} 
+          onChange={this.handleChange}
         />
         <Container>
           <Stream tweetIds={tweetIds} query={query} />

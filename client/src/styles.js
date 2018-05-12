@@ -53,5 +53,3 @@ export const RightBox = styled.span`
   float: right;
   width: 50%;
 `;
-
-

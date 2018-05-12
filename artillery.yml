@@ -5,9 +5,20 @@ config:
       arrivalRate: 1
       rampTo: 10
     - duration: 30
+      arrivalRate: 10
+      rampTo: 20
+    - duration: 30
       arrivalRate: 20
+      rampTo: 30
     - duration: 30
       arrivalRate: 30
+      rampTo: 50
+    - duration: 30
+      arrivalRate: 50
+      rampTo: 75
+    - duration: 30
+      arrivalRate: 75
+      rampTo: 100
   http:
     timeout: 10
   payload: 
