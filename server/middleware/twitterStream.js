@@ -2,7 +2,10 @@ const Twitter = require('node-tweet-stream');
 
 const { storeTweet } = require('../helpers/parseData');
 const {
-  consumerKey, accessToken, accessSecret, consumerSecret,
+  consumerKey,
+  accessToken,
+  accessSecret,
+  consumerSecret,
 } = require('../../config/apikeys');
 
 const tw = new Twitter({
@@ -15,7 +18,7 @@ const tw = new Twitter({
 // const searchQuery = 't' || '';
 // tw.track(searchQuery);
 // tw.track('a');
-// tw.track('i');
+// tw.track('e');
 
 tw.on('tweet', (tweet) => { storeTweet(tweet); });
 

@@ -42,3 +42,7 @@ bower_components/
 
 # temporary files
 db/migrations/20180503115925_tweets.js
+temp.json
+query-times.json
+artillery-report.js
+newrelic_agent.log

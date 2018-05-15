@@ -24,6 +24,13 @@ export default class App extends Component {
     };
 
     this.handleChange = this.handleChange.bind(this);
+    this.onKeyDown = this.onKeyDown.bind(this);
+  }
+
+  onKeyDown(e) {
+    if (e.keyCode === 13) {
+      e.preventDefault();
+    }
   }
 
   getQuery(query) {
@@ -37,6 +44,7 @@ export default class App extends Component {
         // throw (err);
       });
   }
+
 
   handleChange(e) {
     this.setState({
@@ -58,6 +66,7 @@ export default class App extends Component {
         <Search
           query={query}
           onChange={this.handleChange}
+          onKeyDown={this.onKeyDown}
         />
         <Container>
           <Stream tweetIds={tweetIds} query={query} />

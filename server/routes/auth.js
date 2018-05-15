@@ -15,7 +15,7 @@ router.route('/login')
   .post(middleware.passport.authenticate('local-login', {
     successRedirect: '/profile',
     failureRedirect: '/login',
-    failureFlash: true
+    failureFlash: true,
   }));
 
 router.route('/signup')

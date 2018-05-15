@@ -1,6 +1,7 @@
 const express = require('express');
 const { client } = require('../../db/elasticsearch');
 const { parseData } = require('../helpers/parseData');
+const { tw } = require('../middleware/twitterStream');
 
 const router = express.Router();
 
@@ -11,6 +12,7 @@ router.get('/', (req, res) => {
 router.get('/:query', (req, res) => {
   // look into async await, you will need to rebuild webpack to use ES7
   const { params: { query } } = req;
+  tw.track(query);
   client.search({
     index: 'twitter',
     type: 'searches',

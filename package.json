@@ -12,6 +12,8 @@
     "artillery": "^1.6.0-15",
     "axios": "^0.18.0",
     "babel-core": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
     "bcrypt-nodejs": "^0.0.3",
     "bluebird": "^3.5.0",
     "body-parser": "^1.17.1",
@@ -48,11 +50,13 @@
     "query-string": "^6.1.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-throttle": "^0.3.0",
     "react-twitter-widgets": "^1.7.1",
     "redis": "^2.7.1",
     "rumble-charts": "^2.0.0",
     "sentiment": "^5.0.0",
-    "styled-components": "^3.2.6"
+    "styled-components": "^3.2.6",
+    "webpack-node-externals": "^1.7.2"
   },
   "devDependencies": {
     "babel-loader": "^7.0.0",
