@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import TweetList from './TweetList.jsx';
+import TweetList from './TweetList';
 import { SmallHeader, LeftText, LeftBox } from '../styles';
 
 const propTypes = {

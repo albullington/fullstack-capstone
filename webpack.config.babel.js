@@ -13,6 +13,9 @@ const common = {
       },
     ],
   },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
 };
 
 const client = {
@@ -28,12 +31,14 @@ const server = {
   target: 'node',
   output: {
     path: path.join(__dirname, 'public/dist'),
-    filename: 'server-bundle.js',
+    filename: 'bundle-server.js',
     libraryTarget: 'commonjs-module',
   },
 };
 
-module.exports = [
-  Object.assign({}, common, client),
-  Object.assign({}, common, server),
-];
+// module.exports = [
+//   Object.assign({}, common, client),
+//   Object.assign({}, common, server),
+// ];
+
+module.exports = Object.assign({}, common, server);

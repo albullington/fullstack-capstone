@@ -1,17 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Search from './Search.jsx';
-import SentimentStats from './SentimentStats.jsx';
-import Stream from './Stream.jsx';
+import Search from './Search';
+import SentimentStats from './SentimentStats';
+import Stream from './Stream';
 import { Background, Header, Container } from '../styles';
-
-// /*
-
-// eslint init
-
-// look into:
-// file loaders for webpack
-// */
 
 export default class App extends Component {
   constructor(props) {
