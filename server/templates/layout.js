@@ -1,4 +1,5 @@
-module.exports.Html = ({ body, styles, title }) => `
+
+module.exports.Html = ({ body, styles, title, script }) => `
 <!doctype html>
 <html>
 <head>
@@ -18,7 +19,7 @@ module.exports.Html = ({ body, styles, title }) => `
       body        { background-color:#87CEEB; }
   </style>
   </div>
-
   </body>
+    ${script}
   </html>
 `;

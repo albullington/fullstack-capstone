@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Throttle } from 'react-throttle';
 import { Text, Form, FormInput } from '../styles';
 
 const propTypes = {
@@ -17,9 +16,7 @@ const defaultProps = {
 
 const Search = ({ onChange, query, onKeyDown }) => (
   <Form>
-    <Throttle time="200" handler="onChange">
-      <FormInput placeholder="Search for..." ref={input => input} onChange={onChange} onKeyDown={onKeyDown} />
-    </Throttle>
+    <FormInput placeholder="Search for..." ref={input => input} onChange={onChange} onKeyDown={onKeyDown} />
     <Text>Showing results for the keyword <em>{query}</em></Text>
   </Form>
 );

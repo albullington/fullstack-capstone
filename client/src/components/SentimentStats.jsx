@@ -10,24 +10,30 @@ const propTypes = {
 
 const defaultProps = {
   sentiment: [],
-  tweetIds: null,
+  tweetIds: [],
 };
 
 const SentimentStats = ({ sentiment, tweetIds }) => {
+  const {
+    score,
+  } = sentiment;
+
   let positiveScore = 0;
   let negativeScore = 0;
   let neutral = 0;
 
-  sentiment.forEach((tweet) => {
-    const score = tweet.score;
-    if (score > 0) {
-      positiveScore += score;
-    } else if (score < 0) {
-      negativeScore += score;
-    } else {
-      neutral += 1;
-    }
-  });
+  console.log('score', sentiment);
+  // sentiment.forEach((tweet) => {
+  //   const score = tweet.score;
+  //   console.log(tweet, 'score');
+  //   if (score > 0) {
+  //     positiveScore += score;
+  //   } else if (score < 0) {
+  //     negativeScore += score;
+  //   } else {
+  //     neutral += 1;
+  //   }
+  // });
 
   const series = [{
     data: [positiveScore, neutral, negativeScore],

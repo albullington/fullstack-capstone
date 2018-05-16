@@ -51,9 +51,9 @@ const storeTweet = (tweet) => {
   axios.post('http://localhost:9200/twitter/searches', {
     data: newTweet,
   }).then((res) => {
-    // console.log(res);
+    res.send(201);
   }).catch((err) => {
-    console.error(err);
+    console.log('parse data error is: ', err);
   });
 };
 

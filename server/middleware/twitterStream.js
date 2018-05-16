@@ -20,6 +20,12 @@ const tw = new Twitter({
 // tw.track('a');
 // tw.track('e');
 
-tw.on('tweet', (tweet) => { storeTweet(tweet); });
+tw.on('tweet', (tweet) => {
+  storeTweet(tweet);
+}).on('error', (err) => {
+  console.log('streaming error', err);
+}).on('end', () => {
+  console.log('end of stream');
+});
 
 module.exports.tw = tw;
