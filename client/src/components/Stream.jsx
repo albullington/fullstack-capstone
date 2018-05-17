@@ -20,7 +20,7 @@ const Stream = ({ tweetIds, query }) => {
   return (
     <LeftBox>
       <SmallHeader>Recent Related Tweets</SmallHeader>
-      <LeftText>Enter your search term above</LeftText>
+        <LeftText>Enter your search term above</LeftText>
       { tweetIds.length > 0 && query.length >= 1 ? (
         <ul>{tweetList}</ul>
   ) : (

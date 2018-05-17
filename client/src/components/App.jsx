@@ -55,15 +55,15 @@ export default class App extends Component {
     return (
       <Background>
         <Header>Welcome to Twitter Analytics</Header>
-        <Search
-          query={query}
-          onChange={this.handleChange}
-          onKeyDown={this.onKeyDown}
-        />
-        <Container>
-          <Stream tweetIds={tweetIds} query={query} />
-          <SentimentStats sentiment={sentiment} tweetIds={tweetIds} />
-        </Container>
+          <Search
+            query={query}
+            onChange={this.handleChange}
+            onKeyDown={this.onKeyDown}
+          />
+            <Container>
+              <Stream tweetIds={tweetIds} query={query} />
+                <SentimentStats sentiment={sentiment} tweetIds={tweetIds} />
+            </Container>
       </Background>
     );
   }

@@ -14,10 +14,6 @@ const defaultProps = {
 };
 
 const SentimentStats = ({ sentiment, tweetIds }) => {
-  const {
-    score,
-  } = sentiment;
-
   let positiveScore = 0;
   let negativeScore = 0;
   let neutral = 0;
@@ -33,26 +29,30 @@ const SentimentStats = ({ sentiment, tweetIds }) => {
     }
   });
 
-  const series = [{
-    data: [positiveScore, neutral, negativeScore],
-  }];
+  const series = [positiveScore, neutral, negativeScore];
+
+  const data = {
+    positive: positiveScore,
+    zero: neutral,
+    negative: negativeScore,
+  };
 
   return (
     <div>
-    <RightBox>
-      <SmallHeader>Stats</SmallHeader>
-      { (tweetIds.length === 0) ? (
-      <LeftText>Analyze positive/negative sentiment</LeftText>
+      <RightBox>
+        <SmallHeader>Stats</SmallHeader>
+        { (tweetIds.length === 0) ? (
+          <LeftText>Analyze positive/negative sentiment</LeftText>
   ) : (
     <div>
-    <List>Positive (blue): { positiveScore }</List>
-    <List>Neutral (gray): { neutral }</List>
-    <List>Negative (orange): { negativeScore }</List>
-    <PieChart series={series}/>
-      </div>
-      )}
+      <List>Positive (light blue): { positiveScore }</List>
+        <List>Negative/Neutral (dark blue): { negativeScore + neutral }</List>
+          <PieChart data={data} />
+    </div>
+      )
+      }
       </RightBox>
-      </div>
+    </div>
   );
 };
 

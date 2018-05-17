@@ -21,7 +21,7 @@ module.exports.Html = ({ body, styles, title }) => `
   </style>
   </div>
   </body>
-  <script src="/dist/bundle.js"></script>
   <script type="text/javascript" src="https://unpkg.com/react-vis/dist/dist.min.js"></script>
+  <script src="/dist/bundle.js"></script>
   </html>
 `;

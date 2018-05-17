@@ -17,7 +17,7 @@ const defaultProps = {
 const Search = ({ onChange, query, onKeyDown }) => (
   <Form>
     <FormInput placeholder="Search for..." ref={input => input} onChange={onChange} onKeyDown={onKeyDown} />
-    <Text>Showing results for the keyword <em>{query}</em></Text>
+      <Text>Showing results for the keyword <em>{query}</em></Text>
   </Form>
 );
 
