@@ -6,8 +6,6 @@ const { ServerStyleSheet } = require('styled-components');
 const middleware = require('../middleware');
 const App = require('../../public/dist/bundle-server');
 const { Html } = require('../templates/layout');
-const { Script } = require('../templates/script');
-
 
 const router = express.Router();
 
@@ -18,12 +16,10 @@ router.route('/')
     const body = renderToString(sheet.collectStyles(React.createElement(appClass)));
     const styles = sheet.getStyleTags();
     const title = 'Server Side Rendering';
-    const script = Script('React.createElement(App)');
     res.status(200).send(Html({
       body,
       styles,
       title,
-      script,
     }));
   });
 

@@ -21,13 +21,20 @@ export const SmallHeader = Header.extend`
   text-align: left;
 `;
 
-export const Text = Header.extend`
+export const Text = styled.p`
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-align: center;  
   font-size: 16px;
   font-weight: 200;
 `;
 
 export const LeftText = Text.extend`
   text-align: left;
+`;
+
+export const List = styled.ul`
+  font-size: 16px;
+  font-weight: 200;
 `;
 
 export const Form = styled.form`

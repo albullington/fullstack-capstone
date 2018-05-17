@@ -1,5 +1,7 @@
 import path from 'path';
 
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+
 const common = {
   module: {
     rules: [
@@ -24,6 +26,9 @@ const client = {
     path: path.join(__dirname, 'public/dist'),
     filename: 'bundle.js',
   },
+  plugins: [
+    new UglifyJsPlugin()
+  ],
 };
 
 const server = {
@@ -36,9 +41,9 @@ const server = {
   },
 };
 
-// module.exports = [
-//   Object.assign({}, common, client),
-//   Object.assign({}, common, server),
-// ];
+module.exports = [
+  Object.assign({}, common, client),
+  Object.assign({}, common, server),
+];
 
-module.exports = Object.assign({}, common, server);
+// module.exports = Object.assign({}, common, server);

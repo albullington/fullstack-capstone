@@ -4,10 +4,6 @@ module.exports = function (grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
-    eslint: {
-      target: ['Gruntfile.js', 'client/**/*.js', 'db/**/*.js', 'server/**/*.js'],
-    },
-
     mochaTest: {
       test: {
         options: {
@@ -33,9 +29,7 @@ module.exports = function (grunt) {
   });
 
   grunt.loadNpmTasks('grunt-mocha-test');
-  grunt.loadNpmTasks('grunt-eslint');
   grunt.loadNpmTasks('grunt-pg');
 
-  grunt.registerTask('default', ['eslint-config-airbnb']);
   grunt.registerTask('test', ['mochaTest']);
 };

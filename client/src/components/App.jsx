@@ -33,7 +33,7 @@ export default class App extends Component {
           sentiment: res.data.sentiment,
         });
       }).catch((err) => {
-        console.log('err is: ', err);
+        console.log('client get err is: ', err);
       });
   }
 
