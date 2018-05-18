@@ -1,0 +1,42 @@
+curl -X PUT "localhost:9200/tweets" -H 'Content-Type: application/json' -d'
+{
+  "mappings": {
+    "doc": {
+      "properties": {
+        "type": { "type": "keyword" },
+        "text": { "type": "text" },
+        "created_at": { "type": "date" }
+      } 
+    }
+  }
+}
+'
+
+curl -X POST "localhost:9200/_reindex" -H 'Content-Type: application/json' -d'
+{
+  "source": {
+    "index": "twitter"
+  },
+  "dest": {
+    "index": "tweets"
+  }
+}
+'
+
+curl -X POST "localhost:9200/_reindex" -H 'Content-Type: application/json' -d'
+{
+  "source": {
+    "index": "twitter"
+  },
+  "dest": {
+    "index": "tweets"
+  },
+  "script": {
+    "source": """
+      ctx._source.type = ctx._type;
+      ctx._id = ctx._type + '-' + ctx._id;
+      ctx._type = 'doc';
+    """
+  }
+}
+'

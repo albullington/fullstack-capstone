@@ -6,6 +6,7 @@ config/test.json
 config/ENV.json
 config/custom-environment-variables.json
 config/apikeys.json
+newrelic.js
 
 # OS X
 .DS_Store
@@ -41,3 +42,7 @@ bower_components/
 
 # temporary files
 db/migrations/20180503115925_tweets.js
+temp.json
+query-times.json
+artillery-report.js
+newrelic_agent.log

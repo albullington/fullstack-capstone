@@ -1,19 +1,26 @@
 config:
   target: "http://localhost:3000"
   phases:
-    - duration: 60
-      arrivalRate: 1
-    - duration: 60
+    - duration: 30
       arrivalRate: 1
       rampTo: 10
-    - duration: 60
+    - duration: 30
       arrivalRate: 10
+      rampTo: 20
+    - duration: 30
+      arrivalRate: 20
+      rampTo: 30
+    - duration: 30
+      arrivalRate: 30
+      rampTo: 50
+    - duration: 30
+      arrivalRate: 50
+      rampTo: 75
+    - duration: 30
+      arrivalRate: 75
       rampTo: 100
-    - duration: 60
-      arrivalRate: 100
-      rampTo: 1000
-  http: 
-    timeout: 100 
+  http:
+    timeout: 10
   payload: 
     path: "queries.csv"
     fields: 
