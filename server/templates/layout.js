@@ -17,7 +17,10 @@ module.exports.Html = ({ body, styles, title }) => `
 
     <div id='root'>${body}</div>
     <style>
-      body        { background-color:#87CEEB; }
+      body  { 
+        height: 800px;
+        background: linear-gradient(to top, rgba(0,0,0,0), rgba(121,199,227,0.5));
+      }
   </style>
   </div>
   </body>
