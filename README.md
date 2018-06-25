@@ -1,27 +1,6 @@
 # Project Name
 
-Twitter analytics page to dynamically render tweets based on queries searched. Requires login. 
-
-# Table of Contents
-
-1. [Usage](#Usage)
-2. [Requirements](#requirements)
-3. [Development](#development)
-4. [Installing Dependencies](#installing-dependencies)
-5. [Tasks](#tasks)
-
-## Usage
-
-> Some usage instructions
-
-## Requirements
-
-- Node 6.9.x
-- Redis 3.2.x
-- Postgresql 9.6.x
-- see package.json file for others
-
-## Development
+Twitter analytics page to dynamically render tweets based on queries searched. Requires login with Google Auth. 
 
 ### Installing System Dependencies
 
@@ -36,17 +15,9 @@ Yarn is a replacement for npm. It's faster and *guarantees* consistency -- as yo
 ### Install Project Dependencies
 
 ```
+yarn install
 yarn global add grunt-cli knex
 ```
-
-## App Configuration
-
-Override settings `config/default.json` in any environment by making a copy of `config/ENV.example.json` and naming it `config/ENV.json` and setting the appropriate variable. 
-
-For environments that require use of environment variables, you can supply variables as defined in `config/custom-environment-variables.json`.
-
-See https://www.npmjs.com/package/config
-And https://github.com/lorenwest/node-config/wiki/Environment-Variables#custom-environment-variables
 
 ## Database Initialization
 
