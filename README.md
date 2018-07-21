@@ -1,4 +1,4 @@
-# Project Name
+# Tweeter Sentiments
 
 Twitter analytics page to dynamically render tweets based on queries searched. Requires login with Google Auth. 
 
